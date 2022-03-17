@@ -4,5 +4,5 @@ items = [
     ("Product3", 12)
 ]
 
-items.sort(key=lambda items:items[1])
-print(items)
+x = list(map(lambda item: item[1] * 1000, items))
+print(x)
