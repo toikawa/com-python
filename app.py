@@ -4,5 +4,7 @@ items = [
     ("Product3", 12)
 ]
 
-x = list(map(lambda item: item[1] * 1000, items))
-print(x)
+#x = list(filter(lambda item: item[1] >9, items))
+#print(x)
+a = [item[1] for item in items if item[1] > 10]
+print(a)
