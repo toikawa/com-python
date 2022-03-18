@@ -1,10 +1,20 @@
-items = [
-    ("Product1", 10),
-    ("Product2", 9),
-    ("Product3", 12)
-]
+from pprint import pprint
+sentence = "This is a common interview question"
 
-#x = list(filter(lambda item: item[1] >9, items))
-#print(x)
-a = [item[1] for item in items if item[1] > 10]
-print(a)
+char_freq = {}
+
+for letter in sentence:
+    if not letter in char_freq:
+        char_freq[letter] = 1
+    else:
+        char_freq[letter] += 1
+
+pprint(char_freq,width=1)
+
+char_freq_sorted = sorted(
+    char_freq.items(),
+    key=lambda kv:kv[1],
+    reverse=True
+    )
+
+print(char_freq_sorted[:3])
